@@ -28,6 +28,11 @@ library(lattice, pos=10)
 
 xyplot(depth ~ locus, type="p", pch=16, auto.key=list(border=TRUE), par.settings=simpleTheme(pch=16), scales=list(x=list(relation='same'), y=list(relation='same')), data=mouse.smaller, main="depth by locus - Chr1")
 
+#let's do chr9 since that's where SMAD3 is
+mouse.chr9 <- read.table("9.coverage", header=FALSE, sep="\t", na.strings="NA", dec=".", strip.white=TRUE, colClasses = c("integer","integer","integer"),nrows = 1e9, col.names = c("Chr","locus","depth"), comment.char = "")
+
+xyplot(depth ~ locus, type="p", pch=16, auto.key=list(border=TRUE), par.settings=simpleTheme(pch=16), scales=list(x=list(relation='same'), y=list(relation='same')), data=mouse.chr9, main="depth by locus - Chr9")
+
 #Used this as a guide: https://www.biostars.org/p/104063/
 
 #In case page gets deleted####
