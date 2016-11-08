@@ -10,3 +10,6 @@ summary(justAvgFold)
 
 #a whopping 11X! this is why we can't do SNP
 
+covstats_assembly <- read.delim("covstats.txt")
+
+summary(covstats_assembly$Covered_percent)

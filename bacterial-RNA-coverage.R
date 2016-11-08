@@ -18,3 +18,9 @@ system("cut -f3 dupsremoved.coverage > justcov")
 system("egrep -v 0 justcov > justcov_nozeroes")
 pw <- scan("justcov_nozeroes")
 summary(pw)
+
+vsj=scan("justcov")
+
+#length of coverage
+length(vsj[vsj!=0])/length(vsj)
+#99%, noice!

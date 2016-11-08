@@ -49,6 +49,10 @@ pp[pp!=0]->pq
 summary(pq)
 #a whopping 3X!
 
+#length of coverage
+length(pp[pp!=0])/length(pp)
+#eesh, 8.3%
+
 #Used this as a guide: https://www.biostars.org/p/104063/
 
 #In case page gets deleted####
