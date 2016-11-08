@@ -1,10 +1,12 @@
+setwd("~/covstats-with-r/")
+
 #commands I ran on the supercomputer
 
 #merge all the samples
 #samtools merge -@ 6 -b ./allbams merged.bam
 
 #remove PCR duplicates
-#samtools rmdup merged.bam > dupsremoved-merged.bam
+#samtools rmdup merged.bam dupsremoved-merged.bam
 
 #calculate the coverage
 #samtools depth dupsremoved-merged.bam > dupsremoved.coverage
