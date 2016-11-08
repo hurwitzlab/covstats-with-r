@@ -33,6 +33,20 @@ mouse.chr9 <- read.table("9.coverage", header=FALSE, sep="\t", na.strings="NA", 
 
 xyplot(depth ~ locus, type="p", pch=16, auto.key=list(border=TRUE), par.settings=simpleTheme(pch=16), scales=list(x=list(relation='same'), y=list(relation='same')), data=mouse.chr9, main="depth by locus - Chr9")
 
+#EVERYTIONG!
+#cat *.coverage > allTogetherNow
+#cut -f3 allTogetherNow > justcov
+pp <- scan("justcov")
+#summary including zeros
+summary(pp)
+
+pp[pp!=0]->pq
+
+#summary not including zeros
+#so this is more like protein coding sequence
+summary(pq)
+#a whopping 3X!
+
 #Used this as a guide: https://www.biostars.org/p/104063/
 
 #In case page gets deleted####
